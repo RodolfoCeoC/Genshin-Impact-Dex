@@ -24,11 +24,13 @@ function App() {
    const respJson = await respuesta.json();
    if (item === "types") {
      setGenshinState({
+       ...genshinState,
       types: respJson.types,
      });
      
    } else{
      setGenshinState({
+       ...genshinState,
        [item]: respJson,
      });
    }   
